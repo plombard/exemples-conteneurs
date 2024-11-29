@@ -1,6 +1,6 @@
 FROM node:lts-slim
 
-COPY MAIS_ENFIN_QUOI .
+COPY main.js .
 
-CMD ["node", "HEIN_QUOI"]
+CMD ["node", "main.js"]
 

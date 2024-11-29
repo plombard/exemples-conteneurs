@@ -16,10 +16,3 @@ resource "local_file" "foo" {
   filename = "${path.module}/foo.bar"
 }
 
-data "local_file" "foo" {
-  filename = "${path.module}/foo.bar"
-}
-
-output "file_content" {
-  value = data.local_file.foo.content
-}
