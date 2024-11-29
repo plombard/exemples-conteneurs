@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: BONNE_QUESTION
+kind: Deployment
 metadata:
   name: exemple-rust
   namespace: default
@@ -11,11 +11,11 @@ spec:
   template:
     metadata:
       labels:
-        app: SAPRISTI_JE_L_IGNORE
+        app: exemple-rust
     spec:
       containers:
       - name: exemple-rust
         image: exemple-rust
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: ME_VOILA_BIEN_EMBETE
+        - containerPort: 8081
