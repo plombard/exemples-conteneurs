@@ -1,5 +1,5 @@
-FROM docker.io/eclipse-temurin:19-jre
+FROM eclipse-temurin:23.0.1_11-jre-noble
 
-COPY *.class .
+COPY MACHIN .
 
-CMD ["java", "Exemple"]
+CMD ["java", "JE_SUIS_BIEN_EMBETE"]

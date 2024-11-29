@@ -1,0 +1,21 @@
+Creer cluster local
+❯ kind create cluster --config kind-config-with-port-mappings.yaml
+
+Charger image local sur les noeuds du cluster
+❯ kind load docker-image exemple-rust
+
+Deployer l'application
+❯ kubectl ?????? -f ???????
+
+Exposer l'application deployee
+❯ kubectl ?????? -f ???????
+
+Verifier la bonne creation des objets
+❯ kubectl get ??????
+
+Verifier que l'application est bien accessible
+❯ curl -v http://localhost
+
+Afficher les logs de l'application
+❯ kubectl logs -f exemple-rust
+

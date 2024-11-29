@@ -2,9 +2,10 @@ use std::{
     io::{prelude::*},
     net::{TcpListener, TcpStream},
 };
+use chrono::Local;
 
 fn main() {
-    let listener = TcpListener::bind("localhost:8081").unwrap();
+    let listener = TcpListener::bind("0.0.0.0:8081").unwrap();
 
     println!("Listening on port 8081");
     for stream in listener.incoming() {
@@ -15,7 +16,8 @@ fn main() {
 }
 
 fn handle_connection(mut stream: TcpStream) {
-
+    let date = Local::now();
+    println!("{} Invocation de Hello", date.format("%Y-%m-%d][%H:%M:%S"));
     let status_line = "HTTP/1.1 200 OK";
     let contents = "Hello World from rust\r\n";
     let length = contents.len();

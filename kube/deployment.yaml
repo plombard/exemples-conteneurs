@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: BONNE_QUESTION
+metadata:
+  name: exemple-rust
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exemple-rust
+  template:
+    metadata:
+      labels:
+        app: SAPRISTI_JE_L_IGNORE
+    spec:
+      containers:
+      - name: exemple-rust
+        image: exemple-rust
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: ME_VOILA_BIEN_EMBETE

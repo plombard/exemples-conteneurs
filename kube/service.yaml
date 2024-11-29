@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: MYSTERE
+metadata:
+  name: exemple-rust
+  namespace: default
+spec:
+  selector:
+    app: TRES_MYSTERIEUX
+  type: NodePort
+  ports:
+  - name: http
+    port: MYSTERE_INSONDABLE
+    nodePort: 30950
