@@ -5,13 +5,13 @@ Charger image local sur les noeuds du cluster
 ❯ kind load docker-image exemple-rust
 
 Deployer l'application
-❯ kubectl ?????? -f ???????
+❯ kubectl apply -f deployment.yaml
 
 Exposer l'application deployee
-❯ kubectl ?????? -f ???????
+❯ kubectl apply -f service.yaml
 
 Verifier la bonne creation des objets
-❯ kubectl get ??????
+❯ kubectl get all
 
 Verifier que l'application est bien accessible
 ❯ curl -v http://localhost
