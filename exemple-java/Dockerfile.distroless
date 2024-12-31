@@ -1,0 +1,10 @@
+FROM openjdk:21-jdk-slim AS build-env
+COPY Exemple.java /app/
+WORKDIR /app
+RUN javac Exemple.java
+RUN jar cfe exemple.jar Exemple *.class
+
+FROM gcr.io/distroless/java21-debian12
+COPY --from=build-env /app /app
+WORKDIR /app
+CMD ["exemple.jar"]
