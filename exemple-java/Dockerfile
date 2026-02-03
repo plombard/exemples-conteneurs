@@ -1,5 +1,5 @@
-FROM eclipse-temurin:23.0.1_11-jre-noble
+FROM eclipse-temurin:25-alpine
 
-COPY MACHIN .
+COPY Exemple.java .
 
-CMD ["java", "JE_SUIS_BIEN_EMBETE"]
+CMD ["java", "Exemple.java"]
